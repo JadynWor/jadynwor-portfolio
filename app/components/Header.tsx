@@ -36,7 +36,7 @@ export default function Header() {
         {/* Left: Avatar */}
         <div className="flex items-center justify-start">
           <img
-            src="/logo-light.png"
+            src="public/jadynwor_avatar.png"
             alt="Avatar"
             className="h-12 w-12 object-contain"
           />
