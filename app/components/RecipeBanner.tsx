@@ -16,12 +16,7 @@ export function RecipeBanner() {
 
   useEffect(() => {
     setMounted(true);
-    fetcher
-      .load("/api/recipe-of-the-day")
-      .catch((err) => {
-        console.error("Fetch error:", err);
-        setError(err.message || "Fetch failed");
-      });
+    fetcher.load("/api/recipe-of-the-day");
   }, [fetcher]);
 
   if (!mounted) return null;
