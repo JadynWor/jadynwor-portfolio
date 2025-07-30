@@ -1,4 +1,3 @@
-// app/components/experience.ts
 export interface Milestone {
   title: string;
   subtitle?: string;

@@ -1,15 +1,12 @@
 // app/components/Timeline.tsx
-import { Milestone, timelineData } from "./timeline";
-import { motion } from "framer-motion";
 import React from "react";
+import { motion } from "framer-motion";
+import type { Milestone } from "./timelineData"; // or experience.ts
+import { timelineData } from "./timelineData";
 
-export function Timeline({
-  items = timelineData,
-}: {
-  items?: Milestone[];
-}) {
+export function Timeline({ items = timelineData }: { items?: Milestone[] }) {
   return (
-    <div className="relative before:absolute before:inset-y-0 before:left-1/2 before:w-[2px] before:bg-gray-300">
+    <>
       {items.map((m, i) => (
         <motion.div
           key={i}
@@ -22,19 +19,21 @@ export function Timeline({
         >
           <div className="w-1/2 px-4">
             <div className="flex items-center gap-3">
-              <span
-                className={`h-4 w-4 ${m.colorClass} rounded-full`}
-              />
-              <h3 className="text-lg font-semibold">{m.title}</h3>
-              <span className="ml-auto text-sm text-gray-500">
+              <span className={`h-4 w-4 ${m.colorClass} rounded-full`} />
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                {m.title}
+              </h3>
+              <span className="ml-auto text-sm text-gray-500 dark:text-gray-400">
                 {m.start}
                 {m.end ? ` – ${m.end}` : ""}
               </span>
             </div>
             {m.subtitle && (
-              <p className="italic text-gray-400">{m.subtitle}</p>
+              <p className="italic text-gray-600 dark:text-gray-400">
+                {m.subtitle}
+              </p>
             )}
-            <ul className="mt-2 ml-6 list-disc text-gray-500">
+            <ul className="mt-2 ml-6 list-disc text-gray-600 dark:text-gray-500">
               {m.details.map((d, j) => (
                 <li key={j}>{d}</li>
               ))}
@@ -42,6 +41,6 @@ export function Timeline({
           </div>
         </motion.div>
       ))}
-    </div>
+    </>
   );
 }

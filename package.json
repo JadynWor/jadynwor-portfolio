@@ -16,12 +16,14 @@
     "@remix-run/serve": "^2.16.8",
     "framer-motion": "^12.23.9",
     "isbot": "^4.1.0",
+    "jsonwebtoken": "^9.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-simple-typewriter": "^5.0.1"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.16.8",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.4",

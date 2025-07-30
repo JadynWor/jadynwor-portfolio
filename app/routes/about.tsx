@@ -1,22 +1,22 @@
 // app/routes/about.tsx
 import type { MetaFunction } from "@remix-run/node";
+import { Hobbies } from "~/components/Hobbies";
+import React from "react";
 import { Timeline } from "~/components/Timeline";
 
+
 export const meta: MetaFunction = () => [
-  { title: "About — Jadyn Wor" },
+  { title: "About — Jadyn Wor" },
   { name: "description", content: "A bit about me and my journey so far." },
 ];
 
 export default function About() {
-  // Replace these with your own images in public/images/
   const photos = [
     "/images/shore.jpg",
     "/images/night-out.jpg",
     "/images/aquarium.jpg",
     "/images/rocks.jpg",
   ];
-
-  // Tailwind rotate classes (make sure these exist in your tailwind.config.js)
   const rotations = ["-6", "3", "-3", "6"] as const;
 
   return (
@@ -24,8 +24,10 @@ export default function About() {
       <main className="max-w-4xl mx-auto px-6 py-20 space-y-16 text-left">
         {/* Header */}
         <section>
-          <h1 className="text-5xl font-bold">About</h1>
-          <p className="mt-4 text-lg text-gray-800 dark:text-gray-200">
+          <h1 className="text-5xl font-bold text-gray-900 dark:text-gray-100">
+            About
+          </h1>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
             A little bit about me…
           </p>
         </section>
@@ -52,8 +54,23 @@ export default function About() {
 
         {/* Timeline */}
         <section>
-          <h2 className="text-2xl font-semibold mb-8">Timeline</h2>
-          <Timeline />
+          <h2 className="text-2xl font-semibold mb-8 text-gray-900 dark:text-gray-100">
+            Timeline
+          </h2>
+          <div className="relative before:absolute before:inset-y-0 before:left-1/2 before:w-[2px] before:bg-gray-200 dark:before:bg-gray-700">
+            <Timeline />
+          </div>
+        </section>
+
+        {/*Projects*/}
+        <section>
+        <h2 className="text-2xl font-semibold mb-8 text-gray-900 dark:text-gray-100">
+            Projects
+          </h2>
+        </section>
+        {/*Hobbies*/}
+        <section>
+          <Hobbies/>
         </section>
       </main>
     </div>
