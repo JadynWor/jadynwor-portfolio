@@ -12,12 +12,15 @@ type Recipe = {
 export function RecipeBanner() {
   const fetcher = useFetcher<Recipe & { message?: string }>();
   const [mounted, setMounted] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    fetcher.load("/api/recipe-of-the-day");
-  }, [fetcher]);
+    if (!hasLoaded) {
+      fetcher.load("/api/recipe-of-the-day");
+      setHasLoaded(true);
+    }
+  }, [hasLoaded]);
 
   if (!mounted) return null;
 
@@ -27,18 +30,18 @@ export function RecipeBanner() {
 
   // If the API returned a `message` field (e.g. Invalid API key)
   if (fetcher.data?.message) {
-    console.error("API Error:", fetcher.data.message);
     return (
       <div className="p-4 bg-red-100 text-red-800 rounded">
-        Error from API: {fetcher.data.message}
+        Recipe unavailable: {fetcher.data.message}
       </div>
     );
   }
 
-  if (error) {
+  // Handle 429 rate limit error specifically
+  if (fetcher.state === "idle" && !fetcher.data) {
     return (
-      <div className="p-4 bg-red-100 text-red-800 rounded">
-        Unexpected error: {error}
+      <div className="p-4 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded">
+        Recipe service temporarily unavailable. Please try again later.
       </div>
     );
   }

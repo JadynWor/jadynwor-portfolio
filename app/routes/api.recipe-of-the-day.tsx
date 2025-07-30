@@ -22,6 +22,14 @@ export const loader: LoaderFunction = async () => {
       }
     );
 
+    // Handle rate limiting (429) specifically
+    if (res.status === 429) {
+      return json(
+        { message: "Rate limit exceeded. Please try again later." },
+        { status: 429 }
+      );
+    }
+
     if (!res.ok) {
       return json(
         { message: `API request failed with status: ${res.status}` },
