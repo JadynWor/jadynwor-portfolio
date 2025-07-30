@@ -17,7 +17,17 @@ function getInitialDarkMode() {
 }
 
 export default function Header() {
-  const [darkMode, setDarkMode] = useState(getInitialDarkMode);
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Set initial dark mode state after component mounts
+    const stored = localStorage.getItem("theme");
+    if (stored) {
+      setDarkMode(stored === "dark");
+    } else {
+      setDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    }
+  }, []);
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -36,7 +46,7 @@ export default function Header() {
         {/* Left: Avatar */}
         <div className="flex items-center justify-start">
           <img
-            src="public/jadynwor_avatar.png"
+            src="/jadynwor_avatar.png"
             alt="Avatar"
             className="h-12 w-12 object-contain"
           />

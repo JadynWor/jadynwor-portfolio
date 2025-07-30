@@ -1,5 +1,3 @@
-// app/components/Typewriter.tsx
-"use client"
 import { useTypewriter, Cursor } from "react-simple-typewriter"
 
 interface Props {
