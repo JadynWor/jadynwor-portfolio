@@ -59,7 +59,7 @@ export default function AnimeDirectoryProject() {
           rel="noopener noreferrer"
           className="inline-flex items-center px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-green-700 transition-colors"
         >
-          Visit Live Site →.v
+          Visit Live Site →
         </a>
       </div>
 
