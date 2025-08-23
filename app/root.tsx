@@ -3,6 +3,7 @@ import { Outlet, Links, Meta, Scripts, ScrollRestoration } from "@remix-run/reac
 import "./tailwind.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/remix"
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Footer />
         <ScrollRestoration />
         <Scripts />
+        <Analytics/>
       </body>
     </html>
   );
