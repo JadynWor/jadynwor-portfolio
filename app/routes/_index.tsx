@@ -1,7 +1,7 @@
 // app/routes/index.tsx
 import type { MetaFunction } from "@remix-run/node";
 import { Typewriter } from "~/components/Typewriter";
-import { RecipeBanner } from "~/components/RecipeBanner";
+import { Projects } from "~/components/Projects";
 
 export const meta: MetaFunction = () => {
   return [
@@ -28,11 +28,9 @@ export default function Index() {
           Welcome to my portfolio!
         </p>
       </main>
-      <section>
-        {/* Recipe of the Day Banner */}
-        {/* Import RecipeBanner at the top: import { RecipeBanner } from "~/components/RecipeBanner"; */}
-        <RecipeBanner />
-      </section>
+      
+      {/* Projects Section */}
+      <Projects />
     </div>
   );
 }

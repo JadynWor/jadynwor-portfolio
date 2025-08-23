@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 const navItems = [
   { name: "Home", to: "/" },
   { name: "About", to: "/about" },
-  { name: "Gear", to: "/gear" },
   { name: "Contact", to: "/contact" },
 ];
 
@@ -63,16 +62,6 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        {/* Right: Dark Mode Toggle */}
-        <div className="flex items-center justify-end">
-          <button
-            aria-label="Toggle dark mode"
-            onClick={() => setDarkMode((d) => !d)}
-            className="text-2xl text-gray-600 dark:text-gray-300 cursor-pointer focus:outline-none"
-          >
-            {darkMode ? "☀️" : "🌙"}
-          </button>
-        </div>
       </div>
     </header>
   );

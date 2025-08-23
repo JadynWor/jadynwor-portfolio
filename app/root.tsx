@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <html lang="en" className="h-full bg-white">
+    <html lang="en" className="h-full dark:text-gray-200">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
