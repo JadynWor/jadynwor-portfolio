@@ -3,18 +3,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   FaEnvelope,
-  FaInstagram,
   FaLinkedin,
-  FaYoutube,
 } from "react-icons/fa";
 import type { SocialMedia } from "./socialmediaData";
 import { socialmedias } from "./socialmediaData";
 
 const iconMap: Record<string, JSX.Element> = {
     email:    <FaEnvelope className="w-6 h-6 text-blue-600" />,
-    instagram:<FaInstagram className="w-6 h-6 text-pink-500" />,
     linkedin: <FaLinkedin className="w-6 h-6 text-blue-700" />,
-    youtube:  <FaYoutube className="w-6 h-6 text-red-600" />,
 };
 
 export function SocialMediaList({

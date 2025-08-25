@@ -13,19 +13,9 @@ export interface SocialMedia {
       link: "mailto:jadynwor@gmail.com",
     },
     {
-      title: "Instagram",
-      description: "jadynmekhi",
-      link: "https://instagram.com/jadynmekhi",
-    },
-    {
       title: "LinkedIn",
       description: "Jadyn Worthington",
       link: "https://linkedin.com/in/jadynwor",
-    },
-    {
-      title: "YouTube",
-      description: "JadynMekhi, coming soon maybe?",
-      link: "/youtube",
     },
   ];
   

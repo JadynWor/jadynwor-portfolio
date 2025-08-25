@@ -2,6 +2,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Typewriter } from "~/components/Typewriter";
 import { Projects } from "~/components/Projects";
+import { LeetCodeBadge } from "~/components/LeetCodeBadge";
 
 export const meta: MetaFunction = () => {
   return [
@@ -28,7 +29,7 @@ export default function Index() {
           Welcome to my portfolio!
         </p>
       </main>
-      
+      {/*<LeetCodeBadge/>}
       {/* Projects Section */}
       <Projects />
     </div>
