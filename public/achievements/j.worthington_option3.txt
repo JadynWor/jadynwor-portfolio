@@ -1,0 +1,128 @@
+﻿Final Project Option 3 Lunar Rover Design
+Jadyn Worthington
+NASA 2020
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abstract
+The Apollo lunar flights may have ended in 1972, but the moon has remained of great interest to NASA and scientists around the world. However, In the half-century since people visited the Moon, NASA has continued to push the boundaries of knowledge to deliver on the promise of humanity’s ingenuity and leadership in space. NASA will continue that work by moving forward to the Moon with astronauts landing on the lunar South Pole by 2024.
+Before 2024 astronauts landing will need to know what kind of terrain, resources, and dangers are awaiting on the lone lunar surface. Odysseus will solve all of NASA’s objectives for lunar exploration. Odysseus overall goals are, take mineral core samples and analyze them for future extracting by partner companies. Scout terrain dangers and pinpoint landmarks, while Odysseus is exploring it will map out the explored terrain giving a map of the explored area in different formats, giving an advantage to astronauts exploring. Odysseus scientific objectives are such as NASA’s objectives but more defined. Odysseus will take samples of the lunar surface and analyze, giving NASA scientists an idea of the moon’s past and what materials will be extracted in the upcoming years. Also Odysseus samples will give NASA scientists more of an understanding of the Moon’s past. 
+Odysseus has four specific components that will help the rover complete its objectives. Odysseus has a drill similar to RAT that will extract samples of the lunar surface and store them in the core of the rover, this component will help reach the goal of understanding the materials on the moon more. Another component is APXS, an Alpha particle x-ray spectrometer, when this device is placed close to rock it can determine the chemical elements that are present. The APXS will also help us understand the surface of the moon, and determine what minerals are present. Also, the APXS will help us understand the geology of the moon, and give us a heightened understanding of the moon’s past. Another unique machine is a microscopic imager, an imager will provide an extreme close-up of core samples and provide us more information about the minerals and bacteria. The last component is by the far the most important part that will help astronauts and the NASA team on earth see the surface of the moon’s terrain and dangers. LIDAR, light detection and ranging, is a remote sensing method that uses light in the form of a pulsed laser to measure ranges. 
+Chassis 
+A chassis Is arguable the most important part of a rover, often called “WEB”, a warm electronics box, holds the most important computers and components. The main objective of the chassis is to carry and protect electronic components and systems. Odysseus' frame is made from aluminum, aluminum is strong and light, aluminum often used in previous NASA rovers has never failed and always holds to higher expectations. When designing Odysseus chassis, there were many factors to consider such as moon dust, radiation, and rough terrain. Therefore I decided to go after a tank design with the chassis being a box fully protecting every vital electronic from dust and radiation. The dimensions of the chassis were limited to 4x8x6 feet, Odysseus final dimensions of the chassis were placed at 3’6ft x 6’2ft x 3’5ft. 
+Mobility Design 
+Odysseus main objectives are to take mineral samples, scout, and map the terrain. Unfortunately, the lunar surface is covered with dead volcanoes, impact craters, and stretches of mountains, possibly making it one of the worst areas to send a rover. In order to have Odysseus efficiently complete the goals and scientific objectives correctly, Odysseus has special navigation and structural components to help achieve these goals such as LIDAR, machine learning, and nitinol wheels.
+Odysseus has 6 wheels, with the front and back two being rotatable by a motor that can rotate 90 degrees outward. This allows the rover to avoid obstacles or instead of wasting power by having to take a route completely over it, Odysseus will be able to rotate its front or back two wheels to move to the side to avoid an obstacle. Having an addition equivalent to this will further help the rover scout rough terrain without risking damage to future astronauts.
+Machine learning is an application of artificial intelligence, that provides systems the ability to automatically learn and improve from experience without being programmed. Machine learning mainly focuses on the development of programs that can access data and use it to learn for themselves (UTA,2020,p.3). Odysseus will use machine learning to autonomously navigate itself on the lunar surface. When Odysseus is navigating the lunar surface, It will receive commands telling them locations to end up and then evaluate the terrain with LIDAR sensors and cameras to choose the best way to get there. The reason for using machine learning is based on the fact that machine learning will safely guide the rover along the lunar surface to conduct its objectives. Even though Odysseus will be autonomous NASA headquarter will still have the option to manually control Odysseus in case of dire emergencies. 
+An essential contribution to a rover is its wheels, ensuring the rover can move smoothly on the surface of the moon with traction but also ensuring wheel durability. During the Apollo era, NASA sent a manned vehicle to help astronauts get around. This manned vehicle used four large flexible wire mesh wheels with stiff inner frames to prevent over-deflection (Williams, 2016.p4). When designing Odysseus I found the Apollo 15 manned vehicles very interesting because of the wire mesh wheels, even though NASA engineers didn’t know of better materials than steel in the 60s the wheels were still efficient and very useful for the lunar surface. However with the recent advancements in metallurgy, Odysseus has been designed to have similar mesh wheels but with nitinol.
+Nitinol is a metal alloy that has unique properties and uses, the most common being that it can be made to “remember” or change shape depending on temperature. Nitinol is the two-way shape memory effect. This shape memory effect is when the metal undergoes a reversible phase transformation between the Austenite and Martensite phases (Synecticadmin,2019,p.1). Under high temperatures, the metal enters the Austenite phase, where it achieves maximum stiffness and is spring-like when bent. The metal enters the Martensite phase during low temperatures. In this phase, the metal feels rubbery and bends easily.  “When Nitinol is in the Martensitic form it can be easily deformed into a new shape.  However, when heated through its transformation temperature it reverts to Austenite and recovers its previous shape. The temperature at which Nitinol remembers its high-temperature form can be adjusted by slight changes in the alloy composition and through heat treatment. Depending on the application depends on which transition temperature you choose”. (Synecticadmin,2019). Therefore Nitinol is a perfect material for the wheels, it can change shapes depending on temperature, it’s durable, it’s similar to a previous design that worked with lesser superior material. In all, nitinol will help the rover achieve the overall goal of having enough mobility to move on the lunar surface to take mineral samples, and scout the terrain.
+Instrument Package & Robotic Components
+When on a lunar surface a rover having the correct instruments and robotics component can be the deal breaker to acquiring information about geology, terrain, and environmental conditions. To fulfill the goals of NASA, Odysseus has four instruments that will help achieve the overall goal of taking mineral samples and scouting the terrain. 
+To succeed in scouting and mapping the terrain, Odysseus will use a LIDAR camera. LIDAR, which stands for Light detection and ranging, is a remote sensing method that uses light in the form of a pulsed laser to measure ranges. These light pulses combined with the current satellites orbiting the moon right now such as the lunar reconnaissance orbiter data will generate a three-dimensional map of the lunar surface (NOAA,2016,p.2). On Odysseus LIDAR sensors and cameras will be placed on top of the mast. When placed on top of the mast, this will give LIDAR a height advantage to further see the terrain. The main objective of having LIDAR is to map the lunar surface, however, with an ordinary mast that is only one-directional and requiring the rover to do more driving in positions to capture data, it just isn’t effective. Therefore the mast of Odysseus is placed on a motor vertically so that It can turn three hundred sixty degrees around, while the upper of the mast with the LIDAR cameras and sensor will be able to ninety degrees to the left and right while being able to rotate ninety degrees up and down. In conclusion, LIDAR will help Odysseus map the terrain and dangers for astronauts incoming from the earth.
+APXS, meaning an alpha particle X-ray spectrometer, APXS determines the elemental chemistry of rocks and soils. Alpha particles are emitted during radioactive decay and x-rays are a type of electromagnetic radiation such as light. The APXS carries a small alpha particle source. The alphas are emitted and bounce back from a science target into a detector in the APXS, along with some X-rays that are excited from the target in the process (BWTEK,2012,p.2). The energy distribution of the alphas and X-rays measured by the detectors is analyzed to determine elemental composition. The elemental composition of a rock describes the amounts of different chemical elements that have come together to form all of the minerals within the rock. Knowing the elemental composition of lunar rocks provides scientists with information about the formation of the planet's crust, as well as any weathering that has taken place. With the APXS being on Odysseus, the rover will be able to determine the elements in lunar rocks and dust. As a result, APXS will better help explore and understand moon resources and partially understand the geology of the lunar surface. 
+To succeed in the main objective of taking mineral samples and analyze, with a scientific goal such as understanding lunar resources in-depth, the Odysseus will have an extractive abrasion drill. Similar to NASA’s RAT robotic arm rock abrasion tool, which has rotating teeth gnaw into the surface of rocks to reveal fresh minerals for analyses with APXS (Gorevan,2018) When designing Odysseus, the goals were set forward at the beginning, map resources, and analyze samples. Inorder to take samples designing a new abrasive tool with more purposes was needed, a drill similar to RAT that could cut minerals with ease, and extract and send samples directly to the rover’s core. Therefore the EAD, extractive abrasive drill, was created. The EAD has rotating grinding teeth to gnaw away the surface of lunar rocks then has an extractive device to core the middle of the rock away giving a cylindrical sample behind that the EAD will export to the analysis computer located in the center of the rover. With EAD placed on the robotic arm of Odysseus objectives such as taking mineral samples, mapping resources, and deepening NASA’s understanding of lunar’s geology.
+MAC, mineral analysis computer, is a computer-based in the center of Odysseus. MAC uses a spectrometer, microscopic imager, and a mineralogy diffraction machine (CheMin) to determine the composition of a sample. A spectrometer is a scientific instrument used to separate and measure spectral components of a sample to determine the composition which in result tells us the kind of material. A Spectrometer works by using light waves to determine the material that emitted the energy or to create a frequency spectrum (BWTEK,2012). Microscopic images provide an extreme close-up of rocks and soils proving context for the interpretation of data about minerals and elements. A Mineralogy diffraction machine or otherwise known as CheMin identifies and measures the abundances of various minerals. CheMin works by beaming x-rays through a sample, then when the x-ray beam interacts with the sample, some of the x-rays are absorbed by atoms in the sample and re-emitted or fluorescence at energies that are characteristic of the particular atoms present (Bristow,2019). In other words, x-ray diffraction also works by x-rays bouncing away at the same angle from the internal crystal structure in the sample. When this occurs, they mutually reinforce each other and produce a distinctive signal. MAC can measure the angle at which x-rays are diffracted toward the detector and use that to identify minerals. As a result, with MAC use of a spectrometer, microscopic imager, and a mineralogy diffraction machine, Odysseus will be able to achieve the goals and objectives of mapping resources, understanding the geology, and set the future for lunar mining.
+Center Contributions
+JPL, otherwise known as jet propulsion lab, has a robotics team full of one hundred and fifty engineers who work on all aspects of robots. With Odysseus being heavily concentrated in delicate robotics components. I believe JPL is the perfect cover to contribute to Odysseus. JPL’s main objectives will be to create the chassis, MAC (Mineral Analysis Computer), and EAD (extractive abrasive tool). The JPL team will first need to create the chassis of the rover, then create the appropriate parts for the MAC and assemble them in the center chassis. After assembly, JPL will need to program MAC to accept samples, however, the computer program will be received from Katherine Johnson center. JPL will ensure MAC can transport samples through the different tools and insure MAC can output sample results to a computer. After the successful assembly of MAC in the chassis, the JPL team next will need to assemble EAD, the abrasion tool that will extract samples. I would suggest JPL create the robotic arm and connect it to MAC therefore the samples will have a place to travel. After connecting the robotic arm, JPL should then assemble EAD and connect the abrasion tool to the arm where it will perform. After such steps JPL still isn’t finished, the APXS and LIDAR aren't installed yet, however, they won’t be created by JPL, only assembled and tested at JPL. The APXS and LIDAR  however will come from Glenn’s research center. Glenn’s research center designs and develops innovative aeronautics and space technology to advance NASA’s missions. APXS and LIDAR both will be manufactured at  Glenn’s research center, after their manufacturing, the two components will be shipped to JPL. 
+After receiving both APXS and LIDAR, JPL will be given permission to finish the rover, which includes the radioisotope thermoelectric generator (RTG), nitinol wheels, and suspension system. In conclusion, with the help of two NASA research centers, the assembly of Odysseus will be simplified.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3D CAD Design
+  
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+References 
+
+
+
+
+
+
+Shoot for the moon. (n.d.). Retrieved February 19, 2021, from https://www.design-engineering.com/features/odg-lunar-rover-1004028325/
+Rover body. (n.d.). Retrieved February 19, 2021, from https://mars.nasa.gov/mars2020/spacecraft/rover/body/
+Rover wheels. (n.d.). Retrieved February 19, 2021, from https://mars.nasa.gov/mars2020/spacecraft/rover/wheels/
+The Apollo Lunar Roving Vehicle. (n.d.). Retrieved February 19, 2021, from https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_lrv.html
+Synecticadmin. (2021, February 15). Everything you need to know about nitinol - product development guide. Retrieved February 19, 2021, from https://synectic.net/everything-you-need-to-know-about-nitinol/
+US Department of Commerce, N. (2012, October 01). What is lidar? Retrieved February 19, 2021, from https://oceanservice.noaa.gov/facts/lidar.html#:~:text=Lidar%2C%20which%20stands%20for%20Light,variable%20distances)%20to%20the%20Earth.
+Rock abrasion Tool (RAT). (n.d.). Retrieved February 19, 2021, from https://mars.nasa.gov/mer/mission/instruments/rat/#:~:text=The%20Rock%20Abrasion%20Tool%20on,by%20the%20rover's%20scientific%20tools.
+CheMin. (2020, April 22). Retrieved February 19, 2021, from https://mars.nasa.gov/msl/spacecraft/instruments/chemin/
