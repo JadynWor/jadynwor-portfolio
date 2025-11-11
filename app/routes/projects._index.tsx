@@ -43,6 +43,8 @@ export default function ProjectsIndex() {
           // Create specific route for each project
           const getProjectRoute = (title: string) => {
             switch (title) {
+              case "Midas Core: Balances API":
+                return "/projects/midas-core";
               case "Anime Directory":
                 return "/projects/anime-directory";
               case "HTTP Backends (Java & Node)":

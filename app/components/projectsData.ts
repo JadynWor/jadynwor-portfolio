@@ -7,6 +7,22 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Midas Core: Balances API",
+    description:
+      "Spring Boot microservice that ingests transaction events from Kafka and serves real-time balances on a lightweight REST endpoint. One deployable handles streaming updates and read requests on a fixed port for operational simplicity.",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "Spring Web",
+      "Spring Data JPA",
+      "Apache Kafka",
+      "PostgreSQL",
+      "Maven",
+      "JUnit"
+    ],
+    link: "/projects/midas-core"
+  },
+  {
     title: "Anime Directory",
     description:
       "YouTube-style video platform on GCP: users upload via signed URLs, Pub/Sub triggers a Cloud Run FFmpeg service (360p transcode + thumbnails), metadata in Firestore, videos served with short-lived signed URLs through a Next.js web client.",
