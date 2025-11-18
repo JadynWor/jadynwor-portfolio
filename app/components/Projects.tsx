@@ -10,7 +10,12 @@ const technologyColors: { [key: string]: string } = {
   "AWS": "bg-orange-500",
   "JavaScript": "bg-yellow-500",
   "Supabase": "bg-green-500",
-  "Spotify API": "bg-green-500"
+  "Spotify API": "bg-green-500",
+  "PostgreSQL": "bg-blue-600",
+  "OpenAI": "bg-emerald-600",
+  "Tailwind CSS": "bg-cyan-500",
+  "shadcn ui": "bg-purple-500",
+  "Vercel": "bg-black"
 };
 
 export function Projects() {
@@ -26,10 +31,12 @@ export function Projects() {
         
         {/* Right side - Project entries */}
         <div className="lg:w-2/3 space-y-8">
-          {projects.map((project, index) => {
+          {projects.slice(0, 4).map((project, index) => {
             // Create specific route for each project
             const getProjectRoute = (title: string) => {
               switch (title) {
+                case "Harvest Hub":
+                  return "/projects/harvest-hub";
                 case "Midas Core: Balances API":
                   return "/projects/midas-core";
                 case "Anime Directory":

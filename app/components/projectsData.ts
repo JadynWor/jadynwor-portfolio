@@ -7,6 +7,23 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Harvest Hub",
+    description:
+      "Overnight hackathon project where restaurants post surplus meals, neighbors claim them, and an image model verifies pickups by comparing before and after photos in private Supabase buckets.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "OpenAI",
+      "Tailwind CSS",
+      "shadcn ui",
+      "Vercel"
+    ],
+    link: "/projects/harvest-hub"
+  },
+  {
     title: "Midas Core: Balances API",
     description:
       "Spring Boot microservice that ingests transaction events from Kafka and serves real-time balances on a lightweight REST endpoint. One deployable handles streaming updates and read requests on a fixed port for operational simplicity.",
@@ -44,6 +61,13 @@ export const projects: Project[] = [
     link: "https://yt-web-client-555517352372.us-east1.run.app"
   },
   {
+    title: "Drop That",
+    description:
+      "AI-assisted toolkit for streetwear founders — plan launches, generate content, and manage day-to-day ops from one workspace. (Private beta, high-level only.)",
+    technologies: ["TypeScript", "React", "Node.js", "REST", "WebSockets", "Relational DB", "Auth"],
+    link: "/projects/drop-that"
+  },
+  {
     title: "HTTP Backends (Java & Node)",
     description:
       "Parallel backends in Spring Boot and Express that expose the same REST surface: CRUD, validation, JWT auth, pagination, rate limiting, background jobs, OpenAPI, k6 load tests—Dockerized with Postgres/Redis and basic observability.",
@@ -52,14 +76,7 @@ export const projects: Project[] = [
       "PostgreSQL", "Supabase", "Redis",
       "Docker", "NGINX", "k6", "JWT"
     ],
-    link: "https://github.com/jadynwor/studying-http-backends" // replace with your repo URL
-  },
-  {
-    title: "Drop That",
-    description:
-      "AI-assisted toolkit for streetwear founders — plan launches, generate content, and manage day-to-day ops from one workspace. (Private beta, high-level only.)",
-    technologies: ["TypeScript", "React", "Node.js", "REST", "WebSockets", "Relational DB", "Auth"],
-    link: "/projects/drop-that"
+    link: "https://github.com/jadynwor/studying-http-backends"
   }
   
 ];

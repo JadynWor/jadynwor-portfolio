@@ -51,6 +51,8 @@ export default function ProjectsIndex() {
                 return "/projects/http-backend";
               case "Drop That":
                 return "/projects/dropthat";
+              case "Harvest Hub":
+                return "/projects/harvest-hub";
               default:
                 return "/";
             }
