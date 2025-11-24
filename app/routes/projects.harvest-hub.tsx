@@ -8,7 +8,7 @@ export const meta: MetaFunction = () => ([
   {
     name: "description",
     content:
-      "Overnight hackathon project where restaurants post surplus meals, neighbors claim them, and an image model verifies pickups by comparing before and after photos."
+      "Harvest Hub is a hackathon project where people post surplus meals, neighbors claim them, and a small image check confirms the pickup using Supabase and OpenAI."
   }
 ]);
 
@@ -52,14 +52,16 @@ export default function HarvestHubProject() {
           Harvest Hub: Verified Community Food Sharing
         </h1>
         <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-          An overnight hackathon project that connects restaurants with surplus meals to community members. The twist? An AI-powered image verification system that automatically validates pickups by comparing before and after photos—all stored securely in private Supabase buckets.
+          Harvest Hub is a small web app my team and I built during a 24 hour hackathon. People can list extra food, people nearby can quietly claim it, and after pickup we run a simple image check that compares the “before” and “after” photos using Supabase Storage and an OpenAI.
         </p>
 
         {/* Team */}
         <div className="mb-8">
           <p className="text-base text-gray-600 dark:text-gray-400">
             <span className="font-semibold text-gray-900 dark:text-gray-100">Team:</span>{" "}
-            <span className="text-gray-700 dark:text-gray-300">Joseph Caballero · Dean Walston · Mercedes Mathews · Me</span>
+            <span className="text-gray-700 dark:text-gray-300">
+              Jadyn Worthington · Joseph Caballero · Dean Walston · Mercedes Mathews
+            </span>
           </p>
         </div>
 
@@ -87,8 +89,6 @@ export default function HarvestHubProject() {
         </a>
       </header>
 
-      
-
       <div className="space-y-16">
         {/* What the product does */}
         <section>
@@ -97,13 +97,20 @@ export default function HarvestHubProject() {
           </h2>
           <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-800/50 dark:to-gray-900/30 rounded-xl p-8 space-y-6 border border-gray-200 dark:border-gray-700 shadow-sm">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Harvest Hub solves a real problem: connecting surplus food with people who need it, while ensuring the system can't be gamed. Here's how it works:
+              The goal was simple: move real food to real people and keep the system honest without a lot of manual oversight.
             </p>
             <ul className="list-disc list-outside space-y-3 text-gray-700 dark:text-gray-300 ml-6 leading-relaxed">
-              <li><strong>Restaurants post listings</strong> with photos of surplus cooked food and set pickup windows</li>
-              <li><strong>Community members claim portions</strong> and upload proof photos after pickup</li>
-              <li><strong>AI verification</strong> compares the original listing photo with the proof photo using a similarity score—if it passes the threshold, the claim is automatically verified</li>
+              <li>
+                <strong>People(the public) post listings</strong> with a photo of surplus cooked food and a pickup window.
+              </li>
+              <li>
+                <strong>Community members claim portions</strong> from a feed of open listings.
+              </li>
+              <li>
+                <strong>After pickup, users upload a proof photo</strong>. The backend compares it to the original image and marks the claim as verified if the similarity score is high enough.
+              </li>
             </ul>
+
             {/* Product Screenshots */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <figure className="group">
@@ -118,7 +125,7 @@ export default function HarvestHubProject() {
                   />
                 </button>
                 <figcaption className="mt-3 text-sm font-medium text-gray-600 dark:text-gray-400 text-center">
-                  Listing Page
+                  Listing page
                 </figcaption>
               </figure>
               <figure className="group">
@@ -133,7 +140,7 @@ export default function HarvestHubProject() {
                   />
                 </button>
                 <figcaption className="mt-3 text-sm font-medium text-gray-600 dark:text-gray-400 text-center">
-                  Claim Flow
+                  Claim flow
                 </figcaption>
               </figure>
               <figure className="group">
@@ -148,7 +155,7 @@ export default function HarvestHubProject() {
                   />
                 </button>
                 <figcaption className="mt-3 text-sm font-medium text-gray-600 dark:text-gray-400 text-center">
-                  Verification State
+                  Verification state
                 </figcaption>
               </figure>
             </div>
@@ -166,7 +173,7 @@ export default function HarvestHubProject() {
                 Core
               </h3>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                Next.js and React with TypeScript for the full-stack application. Supabase handles authentication, PostgreSQL database, and private storage buckets. Next.js API routes manage business logic, while OpenAI's vision model powers the image verification system.
+                The app is built with Next.js, React, and TypeScript so the UI and APIs live in the same codebase. Supabase handles auth, Postgres, and private file storage. A single Next.js API route calls an OpenAI vision model to score how similar two images are.
               </p>
             </div>
             <div>
@@ -174,7 +181,7 @@ export default function HarvestHubProject() {
                 Frontend
               </h3>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                Tailwind CSS for styling, shadcn ui for polished components, lucide-react for intuitive icons, and Framer Motion for smooth animations. This combination let us build a professional interface quickly without getting bogged down in custom CSS.
+                Tailwind CSS keeps layout and spacing fast to work with. shadcn ui gives us solid, accessible components, and lucide-react provides the icons. It is a small stack, but it let us get to “usable” quickly.
               </p>
             </div>
             <div>
@@ -182,7 +189,7 @@ export default function HarvestHubProject() {
                 Platform
               </h3>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                Deployed on Vercel, which seamlessly handles both the Next.js application and API routes in a single deployment.
+                Everything is deployed on Vercel, which runs both the Next.js pages and the API routes in one deployment.
               </p>
             </div>
           </div>
@@ -195,20 +202,17 @@ export default function HarvestHubProject() {
           </h2>
           <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-800/50 dark:to-gray-900/30 rounded-xl p-8 space-y-6 border border-gray-200 dark:border-gray-700 shadow-sm">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              The hackathon kicked off at 6 PM with three tracks: health advocacy, financial literacy, and food scarcity. We chose food scarcity—and committed to building something that actually worked, not just a polished demo.
+              The hackathon opened with three prompts: health advocacy, financial literacy, and food scarcity. We picked food scarcity and decided that if we were going to stay up all night, we wanted something that actually moved data end to end, not just a slide deck.
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              After the initial brainstorming, we worked from 11 PM to 8 AM to build a complete flow:
+              After the kickoff, we worked from about 11 PM to 8 AM building the core loop:
             </p>
             <ol className="list-decimal list-outside space-y-3 text-gray-700 dark:text-gray-300 ml-6 leading-relaxed">
-              <li>Restaurants post listings with photos of surplus food</li>
-              <li>Community members claim portions they want</li>
-              <li>After pickup, users upload proof photos</li>
-              <li>The backend verifies the match and updates metrics automatically</li>
+              <li>People create listings with photos of surplus food.</li>
+              <li>Community members claim the listings they want.</li>
+              <li>Users upload a proof photo after pickup.</li>
+              <li>The backend decides whether to verify the claim based on image similarity.</li>
             </ol>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Rather than stopping at a Figma mockup, we built real functionality: working APIs for file uploads and database writes, secure storage in Supabase private buckets, and actual verification logic that compares images and makes decisions based on similarity scores.
-            </p>
           </div>
         </section>
 
@@ -223,7 +227,7 @@ export default function HarvestHubProject() {
                 Next.js (web + API)
               </h3>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                One repository, one deployment for both UI and backend. File-based routing made it easy to organize listing pages, claim flows, and dashboards. API routes handled business logic without needing a separate Node server. Perfect for an overnight project where we wanted to focus on behavior, not infrastructure setup.
+                One stack for pages and backend code meant less setup and more time shipping features. File based routing gave us quick pages for listings and claims, and API routes let us keep all our logic close to the UI.
               </p>
             </div>
             <div>
@@ -231,10 +235,14 @@ export default function HarvestHubProject() {
                 Supabase (backend + storage)
               </h3>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
-                Supabase gave us everything we needed out of the box. Email-based authentication for both restaurants and community users. PostgreSQL tables for <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">restaurants</code>, <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">listings</code>, <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">claims</code>, and <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">image_verifications</code>. Row Level Security ensured users only saw their own data.
+                Supabase gave us auth, Postgres, and file storage with a single client. We created basic tables for{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">publishers</code>,{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">listings</code>,{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">claims</code>, and{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">image_verifications</code>.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Private storage buckets kept all food and proof photos secure, accessible only via short-lived signed URLs generated server-side. This let us skip building custom auth and storage infrastructure, so we could focus on the actual user flows.
+                Images live in a private bucket. The server generates short lived signed URLs whenever the verification route needs to read them, so we never expose bucket keys to the browser.
               </p>
             </div>
             <div>
@@ -242,15 +250,15 @@ export default function HarvestHubProject() {
                 OpenAI (image verification)
               </h3>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Our API route sends both the original listing image and the proof photo to OpenAI's vision model. The model returns a similarity score. If it's above 95%, we mark the claim as verified. If lower, it gets flagged for review. Simple rule, easy to explain: if your proof photo actually looks like the original tray, the system trusts you.
+                For verification, we send the original listing image and the proof image to an OpenAI endpoint and use the similarity score it returns. If the score is high enough, the claim is marked verified; otherwise it is flagged. It is not perfect, but it was enough to show the idea working.
               </p>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                shadcn ui + lucide
+                shadcn ui + lucide + Framer Motion
               </h3>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Pre-built components for cards, forms, and dialogs. Lucide icons made actions obvious—claim buttons, verify status, and state indicators. This meant we spent our time on UX and data flow, not wrestling with raw CSS.
+                We used shadcn ui for forms, cards, and modals, and lucide for icons. Those libraries let us keep the interface clean without sinking hours into custom styling also using Framer gave good animations for ladning page.
               </p>
             </div>
           </div>
@@ -263,14 +271,22 @@ export default function HarvestHubProject() {
           </h2>
           <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-800/50 dark:to-gray-900/30 rounded-xl p-8 space-y-6 border border-gray-200 dark:border-gray-700 shadow-sm">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              The architecture is straightforward and purpose-built:
+              At a high level:
             </p>
             <ul className="list-disc list-outside space-y-3 text-gray-700 dark:text-gray-300 ml-6 leading-relaxed">
-              <li><strong>Next.js on Vercel</strong> serves all pages (listing browse, create listing, claims, dashboard) and handles API routes: <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">/api/listings</code>, <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">/api/claims</code>, and <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">/api/verify</code></li>
-              <li><strong>Supabase</strong> manages authentication, sessions, PostgreSQL database (all entities), and private storage buckets for images</li>
-              <li><strong>OpenAI</strong> provides the vision model that scores image similarity for verification</li>
+              <li>
+                <strong>Next.js on Vercel</strong> renders the UI and exposes API routes like{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">/api/listings</code>,{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">/api/claims</code>, and{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">/api/verify</code>.
+              </li>
+              <li>
+                <strong>Supabase</strong> manages auth, Postgres tables, and private storage buckets.
+              </li>
+              <li>
+                <strong>OpenAI</strong> provides the image similarity score when we need to verify a claim.
+              </li>
             </ul>
-            {/* High Level Architecture Diagram */}
             <figure className="mt-8">
               <img
                 src="/project/harvesthub.png.png"
@@ -278,7 +294,7 @@ export default function HarvestHubProject() {
                 className="w-full rounded-xl shadow-xl border-2 border-gray-200 dark:border-gray-700"
               />
               <figcaption className="mt-4 text-sm text-gray-600 dark:text-gray-400 text-center font-medium">
-                High level architecture — Client → Next.js → Supabase Auth / DB / Storage → OpenAI
+                High level architecture — Client → Next.js → Supabase → OpenAI
               </figcaption>
             </figure>
           </div>
@@ -294,22 +310,19 @@ export default function HarvestHubProject() {
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
                 1. Create listing – POST /api/listings
               </h3>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
-                Restaurant staff fills out a form in the Next.js UI and uploads a photo of the surplus food tray.
-              </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                The API route uploads the image to Supabase Storage (private bucket) and inserts a row into the listings table with restaurant ID, description, pickup window, and image path. Every listing is guaranteed to have both a database record and a secure image in storage.
+                The route receives the listing form and image, uploads the image to a private bucket, and creates a row in{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">listings</code> with the image path and pickup window.
               </p>
             </div>
             <div className="border-l-4 border-green-500 pl-6">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
                 2. Create claim – POST /api/claims
               </h3>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
-                A community member signs in, browses available listings, selects one, and clicks Claim.
-              </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                The API route inserts a row into the claims table with user ID, listing ID, and status set to pending. At this point, the system knows who intends to pick up what, but hasn't marked the transaction as completed yet.
+                When a user claims a listing, we insert a row in{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">claims</code> with status set to{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">pending</code>. This records intent but does not count as a finished pickup yet.
               </p>
             </div>
             <div className="border-l-4 border-purple-500 pl-6">
@@ -317,21 +330,12 @@ export default function HarvestHubProject() {
                 3. Upload proof and verify – POST /api/verify
               </h3>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
-                This is where the magic happens. After pickup, the user uploads a proof photo from their phone.
+                After pickup, the user uploads a proof photo. The route stores that image, fetches both image paths, generates signed URLs, and calls the OpenAI model.
               </p>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
-                The API route:
-              </p>
-              <ul className="list-disc list-outside space-y-2 text-gray-700 dark:text-gray-300 ml-6 leading-relaxed">
-                <li>Uploads the proof image to the same private Supabase bucket</li>
-                <li>Reads both image paths from PostgreSQL</li>
-                <li>Generates short-lived signed URLs for both images (server-side only)</li>
-                <li>Sends both URLs to OpenAI's vision model for comparison</li>
-                <li>Stores the similarity score in the <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">image_verifications</code> table</li>
-                <li>Updates the claim status: verified if score meets threshold, otherwise flagged for review</li>
-              </ul>
-              <p className="text-lg text-gray-600 dark:text-gray-400 italic mt-4 leading-relaxed">
-                This turns two images into a single, traceable verification decision—no manual review needed for clear matches.
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                We store the score in{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">image_verifications</code> and update the claim to{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">verified</code> or flagged depending on the threshold.
               </p>
             </div>
           </div>
@@ -344,13 +348,10 @@ export default function HarvestHubProject() {
           </h2>
           <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-800/50 dark:to-gray-900/30 rounded-xl p-8 space-y-4 border border-gray-200 dark:border-gray-700 shadow-sm">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              The Next.js app runs on Vercel, serving both server and client components. Routes for listings and claims call Supabase Auth server-side to validate sessions before rendering. All write operations—creating listings, making claims, and verifying pickups—flow through API routes, keeping PostgreSQL and Supabase Storage perfectly in sync.
-            </p>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Supabase PostgreSQL is the single source of truth for all data. Storage buckets only expose photos via short-lived signed URLs generated server-side. OpenAI is called exclusively from the server—API keys and storage URLs never touch the browser, keeping everything secure.
+              The Next.js app runs on Vercel and talks to Supabase and OpenAI only through server side API routes. Writes for listings, claims, and verifications all go through those routes, which keeps the database and storage in sync. Photos are only accessible via signed URLs, and the OpenAI API key never leaves the server.
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-semibold">
-              The mental model stays simple: <span className="text-blue-600 dark:text-blue-400">Client → API routes → Supabase + OpenAI</span>
+              In short: <span className="text-blue-600 dark:text-blue-400">Client → API routes → Supabase + OpenAI</span>.
             </p>
           </div>
         </section>
@@ -362,10 +363,10 @@ export default function HarvestHubProject() {
           </h2>
           <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-800/50 dark:to-gray-900/30 rounded-xl p-8 space-y-4 border border-gray-200 dark:border-gray-700 shadow-sm">
             <ul className="list-disc list-outside space-y-3 text-lg text-gray-700 dark:text-gray-300 ml-6 leading-relaxed">
-              <li><strong>Next.js API routes for all writes:</strong> Centralized business logic, easier to secure and maintain</li>
-              <li><strong>Supabase for auth and data:</strong> One platform for everything, faster development, less complexity</li>
-              <li><strong>Server-side verification:</strong> Keeps API keys and sensitive logic away from the client, plus flexibility to change models without frontend updates</li>
-              <li><strong>shadcn + lucide:</strong> Professional UI components in hours instead of days, letting us focus on functionality</li>
+              <li>Use Next.js API routes for all writes so logic, storage, and DB access stay in one place.</li>
+              <li>Lean on Supabase for auth, Postgres, and file storage instead of wiring separate services.</li>
+              <li>Keep image verification and OpenAI calls strictly server side for security and easier iteration.</li>
+              <li>Use shadcn and lucide to get a clean UI without over-investing in custom design for a hackathon app.</li>
             </ul>
           </div>
         </section>
@@ -381,28 +382,26 @@ export default function HarvestHubProject() {
                 Trust vs Simplicity
               </h3>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                We didn't have time for complex fraud detection systems. Instead, we focused on one clear signal: how similar are the two photos? This gave us an honest, explainable rule that users could understand and trust.
+                We did not have time for a full fraud system. A single similarity score and threshold felt like the right balance between something the judges could understand and something we could actually build that night.
               </p>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                File Uploads and Signed URLs Under Pressure
-              </h3>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
-                Most of our time went into ensuring:
-              </p>
-              <ul className="list-disc list-outside space-y-2 text-gray-700 dark:text-gray-300 ml-6 leading-relaxed">
-                <li>Uploads land in the correct private bucket</li>
-                <li>File paths are stored accurately in the database</li>
-                <li>Signed URLs are generated only server-side and expire correctly</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                Parallel Work Through Clear API Contracts
+                File Uploads and Signed URLs
               </h3>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                By centering everything on three main endpoints, the team could work in parallel. One person handled API routes, database, and storage, while others built frontend forms and flows using shadcn UI components. Clear contracts meant no blocking dependencies.
+                Most of the debugging time was spent on getting uploads into the right bucket, storing the paths correctly, and generating signed URLs only on the server.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                Parallel Work Through Clear Endpoints
+              </h3>
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                By agreeing on the shape of{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">POST /api/listings</code>,{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">POST /api/claims</code>, and{" "}
+                <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">POST /api/verify</code> early, we were able to split the work between backend wiring and frontend flows without blocking each other.
               </p>
             </div>
           </div>
@@ -410,63 +409,97 @@ export default function HarvestHubProject() {
 
         {/* Scalable architecture */}
         <section>
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-            Future: Scaling to 100k Users
-          </h2>
-          <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-800/50 dark:to-gray-900/30 rounded-xl p-8 space-y-8 border border-gray-200 dark:border-gray-700 shadow-sm">
-            {/* Scalable Architecture Diagram */}
-            <figure>
-              <img
-                src="/project/harvesth-scalable.png"
-                alt="Scalable architecture diagram: CDN → LB → Next.js instances → Supabase → Queue → Worker → Model"
-                className="w-full rounded-xl shadow-xl border-2 border-gray-200 dark:border-gray-700"
-              />
-              <figcaption className="mt-4 text-sm text-gray-600 dark:text-gray-400 text-center font-medium">
-                Scalable architecture — CDN → LB → Next.js instances → Supabase → Queue → Worker → Model
-              </figcaption>
-            </figure>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              To scale beyond a hackathon demo to handle 100k users and 1M reads per day:
-            </p>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                Web and API Tier
-              </h3>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Use CDN and edge caching for public listing pages. Run multiple Next.js instances behind a load balancer. Keep read endpoints cache-friendly, write endpoints transactional and consistent.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                Supabase (Data + Storage)
-              </h3>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Add strategic indexes on listings, claims, and verification tables. Keep verification rows append-only, expose aggregates via materialized views. Leverage Supabase's built-in scaling for both Postgres and storage.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                Asynchronous Image Verification
-              </h3>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Refactor <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">/api/verify</code> to enqueue jobs instead of blocking on the model. A worker service pulls jobs from a queue, fetches signed URLs from storage, calls the vision model, and writes scores back to Postgres. Consider an embedding-based similarity approach (vision model → vectors → cosine similarity) for better flexibility and performance.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                Reliability and Safety
-              </h3>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Implement edge caching for read-heavy endpoints. Add rate limits on claim and verify endpoints to prevent abuse. Set up centralized monitoring and logging for API latency, error rates, worker throughput, failures, and spikes in rejected claims.
-              </p>
-            </div>
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
-              Same architecture shape, just hardened: Next.js at the edge, Supabase as the core backend, an async image verification pipeline on the side.
-            </p>
-          </div>
-        </section>
+  <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+    Future: Scaling the Idea
+  </h2>
+  <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-800/50 dark:to-gray-900/30 rounded-xl p-8 space-y-8 border border-gray-200 dark:border-gray-700 shadow-sm">
+    <figure>
+      <img
+        src="/project/harvesth-scalable.png"
+        alt="Scalable architecture diagram: CDN → load balancer → Next.js instances → Supabase → queue → worker → model"
+        className="w-full rounded-xl shadow-xl border-2 border-gray-200 dark:border-gray-700"
+      />
+      <figcaption className="mt-4 text-sm text-gray-600 dark:text-gray-400 text-center font-medium">
+        How I would grow Harvest Hub beyond the hackathon version
+      </figcaption>
+    </figure>
 
-    
+    <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+      The current build is a one night hackathon project, but the shape of the system can handle real traffic with a few deliberate upgrades. 
+      The target in my head is something like one hundred thousand users and around one million reads per day.
+    </p>
+
+    {/* Web and API tier */}
+    <div>
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
+        Web and API tier
+      </h3>
+      <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        I would keep Next.js but put it behind a CDN and a load balancer. Public listing pages are a good fit for edge caching so most read traffic never hits the app directly. 
+        The app itself would run as a  few different Next.js instances that share the same environment and talk to the same Supabase project. 
+        Read endpoints are tuned to be cache friendly. Write endpoints stay small and transactional so each request either succeeds or fails clearly.
+      </p>
+    </div>
+
+    {/* Supabase data and storage */}
+    <div>
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
+        Supabase data and storage
+      </h3>
+      <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        On the Supabase side the work is mostly about discipline. 
+        I would add targeted indexes on listings, claims, and verification tables that match how the UI actually queries them. 
+        Verification rows can stay append only and analytics can read from materialized views or a small reporting table so heavy dashboards do not compete with core traffic. 
+        Storage already scales well for images, so the main concern is keeping bucket paths predictable and signed URL lifetimes reasonable.
+      </p>
+    </div>
+
+    {/* Async image verification */}
+    <div>
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
+        Asynchronous image verification
+      </h3>
+      <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        The main change to the core loop would be verification. 
+        Right now the verify route calls the model directly. 
+        At scale I would turn that into a job. 
+        <code className="px-1.5 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-sm font-mono">POST /api/verify</code> would write a job into a queue and return quickly. 
+        A small worker service should pull jobs, fetch signed URLs from Supabase Storage, then call the vision model, and then write the score and status back into Postgres.
+      </p>
+    </div>
+
+    {/* CAP, reliability and safety */}
+    <div>
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
+        Availability, consistency, and CAP trade offs
+      </h3>
+      <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        In terms of CAP theorem, the internet will always give you network partitions at some point, so the real choice is how much consistency you are willing to trade for availability. 
+        For Harvest Hub I would be more towards being available: people should still be able to see listings and claim food even if a replica or the worker is having a bad day.
+      </p>
+      <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mt-3">
+        That means core writes like creating a listing or a claim stay strongly consistent, but secondary views are allowed to be consistent. 
+        A dashboard might be a few seconds behind. A verification status might take a small delay to flip from pending to verified. 
+        That is an acceptable trade if it keeps the app responsive in my opinion.
+      </p>
+    </div>
+
+    <div>
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
+        Reliability and safety
+      </h3>
+      <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        On top of that I would add edge caching for read heavy endpoints, rate limits on claim and verify routes. 
+      </p>
+    </div>
+
+    <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+      The overall shape of the system stays the same: Next.js at the edge, Supabase as the main backend, and an async verification service on the side. 
+      The difference is that each piece is treated as something people rely on every day, not just something that has to survive a demo.
+    </p>
+  </div>
+</section>
+
       </div>
 
       {/* Image Modal */}
@@ -507,4 +540,3 @@ export default function HarvestHubProject() {
     </div>
   );
 }
-
