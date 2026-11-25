@@ -16,12 +16,12 @@ export default function ArticlePage() {
 
   if (!article) {
     return (
-      <div className="max-w-4xl mx-auto px-6 py-20">
+      <div className="max-w-[1080px] mx-auto px-6 py-6">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">Article Not Found</h1>
+          <h1 className="text-[28px] font-bold text-gray-900">Article Not Found</h1>
           <Link
             to="/"
-            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#1a0dab] hover:underline"
           >
             ← Back home
           </Link>
@@ -31,17 +31,17 @@ export default function ArticlePage() {
   }
 
   return (
-    <article className="max-w-4xl mx-auto px-6 py-20 space-y-12">
+    <article className="max-w-[1080px] mx-auto px-6 py-6 space-y-8">
       <div>
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+          className="inline-flex items-center gap-2 text-sm font-medium text-[#1a0dab] hover:underline"
         >
           ← Back home
         </Link>
       </div>
 
-      <div className="overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg">
+      <div className="overflow-hidden border border-gray-200 bg-white">
         {article.image && (
           <div className="h-72 w-full overflow-hidden">
             <img src={article.image} alt={article.title} className="h-full w-full object-cover" />
@@ -50,11 +50,11 @@ export default function ArticlePage() {
 
         <div className="space-y-6 p-10">
           <div>
-            <p className="text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">Press Feature</p>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">{article.title}</h1>
+            <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">Press Feature</p>
+            <h1 className="text-[20px] border-b border-gray-300 pb-1 md:text-4xl font-bold text-gray-900">{article.title}</h1>
           </div>
 
-          <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
+          <div className="flex flex-wrap gap-4 text-sm text-gray-600">
             <span>{article.publication}</span>
             <span>•</span>
             <span>{article.date}</span>
@@ -67,7 +67,7 @@ export default function ArticlePage() {
           </div>
 
           {article.description && (
-            <p className="rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 p-6 text-gray-700 dark:text-gray-300">
+            <p className="border border-gray-200 bg-gray-50 p-6 text-gray-700">
               {article.description}
             </p>
           )}
@@ -77,7 +77,7 @@ export default function ArticlePage() {
               href={article.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-5 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-50 dark:hover:bg-gray-700"
+              className="inline-flex items-center gap-2 border border-gray-300 bg-white px-5 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
             >
               Read the feature on York College / CUNY
             </a>

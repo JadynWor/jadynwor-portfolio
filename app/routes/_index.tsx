@@ -12,13 +12,18 @@ import {
   type Entry,
 } from "~/content";
 
+const DESCRIPTION =
+  "Software engineer at Bloom Energy and incoming M.S. Computer Science student at Georgia Tech. Builder of ARIA and TerraWatch.";
+
 export const meta: MetaFunction = () => [
   { title: "Jadyn Worthington" },
-  {
-    name: "description",
-    content:
-      "Jadyn Worthington: software engineer at Bloom Energy and incoming M.S. Computer Science student at Georgia Tech.",
-  },
+  { name: "description", content: DESCRIPTION },
+  { property: "og:title", content: "Jadyn Worthington" },
+  { property: "og:description", content: DESCRIPTION },
+  { property: "og:url", content: "https://jadynwor.com/" },
+  { name: "twitter:title", content: "Jadyn Worthington" },
+  { name: "twitter:description", content: DESCRIPTION },
+  { tagName: "link", rel: "canonical", href: "https://jadynwor.com/" },
 ];
 
 const VISIBLE_UPDATES = 5;

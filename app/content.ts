@@ -72,6 +72,10 @@ export const updates: Update[] = [
     text: "Completed my time at New Light Technologies.",
   },
   {
+    date: "Spring 2025",
+    text: "Spoke on a Tech Council of Delaware panel about getting started in tech.",
+  },
+  {
     date: "2024",
     text: "Profiled by York College / CUNY on how NASA's STEM program kept me on track.",
     link: { label: "article", href: "/achievements/articles/nasa-stem-program" },
