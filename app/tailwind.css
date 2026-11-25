@@ -20,9 +20,9 @@ body {
 }
 .site-header > div,
 .site-footer > div {
-  max-width: 780px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 10px 16px;
+  padding: 10px 24px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -54,9 +54,9 @@ body {
 }
 
 .classic {
-  max-width: 780px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 24px 16px 0;
+  padding: 24px 24px 0;
   font-size: 16px;
   line-height: 1.55;
 }
