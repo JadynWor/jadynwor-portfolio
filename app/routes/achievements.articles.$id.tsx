@@ -20,10 +20,10 @@ export default function ArticlePage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">Article Not Found</h1>
           <Link
-            to="/achievements"
+            to="/"
             className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
           >
-            ← Back to Achievements
+            ← Back home
           </Link>
         </div>
       </div>
@@ -34,10 +34,10 @@ export default function ArticlePage() {
     <article className="max-w-4xl mx-auto px-6 py-20 space-y-12">
       <div>
         <Link
-          to="/achievements"
+          to="/"
           className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
         >
-          ← Back to Achievements
+          ← Back home
         </Link>
       </div>
 

@@ -1,11 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
-import { Achievements } from "~/components/Achievements";
+import { redirect } from "@remix-run/node";
 
-export const meta: MetaFunction = () => [
-  { title: "Achievements — Jadyn Wor" },
-  { name: "description", content: "Research papers, articles, and awards." },
-];
-
-export default function AchievementsIndex() {
-  return <Achievements />;
-}
+// Old page, folded into the home page.
+export const loader = () => redirect("/#updates", 301);
