@@ -2,40 +2,210 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --paper: 255 255 255;
-  --surface: 255 255 255;
-  --line: 226 226 226;
-  --accent: 10 10 10;
-  --ink-100: 242 242 242;
-  --ink-500: 115 115 115;
-  --ink-600: 82 82 82;
-  --ink-700: 50 50 50;
-  --ink-900: 10 10 10;
-  color-scheme: light;
-}
-
-:root.dark {
-  --paper: 0 0 0;
-  --surface: 10 10 10;
-  --line: 40 40 40;
-  --accent: 250 250 250;
-  --ink-100: 28 28 28;
-  --ink-500: 140 140 140;
-  --ink-600: 170 170 170;
-  --ink-700: 205 205 205;
-  --ink-900: 250 250 250;
-  color-scheme: dark;
-}
+/* Plain, old-school academic homepage styling. */
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
-  @apply bg-paper font-sans text-ink-900 antialiased;
+  background: #fff;
+  color: #111;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-::selection {
-  @apply bg-ink-900 text-paper;
+.site-header {
+  border-bottom: 1px solid #ccc;
+}
+.site-header > div,
+.site-footer > div {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  font-size: 15px;
+}
+.site-header a {
+  color: #111;
+  text-decoration: none;
+}
+.site-header > div > a {
+  font-weight: bold;
+}
+.site-header nav {
+  display: flex;
+  gap: 16px;
+}
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+.site-footer {
+  border-top: 1px solid #ccc;
+  margin-top: 48px;
+}
+.site-footer > div {
+  font-size: 13px;
+  color: #555;
+  justify-content: flex-start;
+}
+
+.classic {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 24px 16px 0;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.classic a,
+.site-footer a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+.classic a:visited {
+  color: #551a8b;
+}
+.classic a:hover,
+.site-footer a:hover {
+  text-decoration: underline;
+}
+.classic p {
+  margin: 0 0 12px;
+}
+.classic h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 6px;
+}
+.classic h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 28px 0 8px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ccc;
+  scroll-margin-top: 16px;
+}
+.classic b {
+  font-weight: bold;
+}
+.classic .mt {
+  margin-top: 10px;
+}
+.classic .small {
+  font-size: 14px;
+}
+.classic .muted {
+  color: #555;
+}
+.classic .date {
+  color: #555;
+}
+.classic .hint {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.classic .intro {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 18px;
+}
+.classic .intro td {
+  vertical-align: top;
+  padding: 0;
+}
+.classic .intro .photo {
+  width: 140px;
+  text-align: right;
+}
+.classic .intro img {
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  border: 1px solid #ccc;
+}
+
+.classic .news {
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.classic .news > div {
+  margin-bottom: 3px;
+}
+.classic .news button {
+  margin-top: 6px;
+  font: inherit;
+  font-size: 12px;
+  padding: 1px 8px;
+  border: 1px solid #999;
+  background: #f3f3f3;
+  cursor: pointer;
+}
+.classic .news button:hover {
+  background: #e6e6e6;
+}
+
+.classic details {
+  margin-bottom: 6px;
+}
+.classic summary {
+  cursor: pointer;
+  list-style: none;
+}
+.classic summary::-webkit-details-marker {
+  display: none;
+}
+.classic summary::before {
+  content: "[+]";
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  color: #555;
+  margin-right: 6px;
+}
+.classic details[open] > summary::before {
+  content: "[\2212]";
+}
+.classic summary:hover b {
+  text-decoration: underline;
+}
+.classic .expand {
+  margin: 6px 0 12px 34px;
+  font-size: 15px;
+}
+.classic .expand ul {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0 0 6px;
+}
+.classic .expand li {
+  margin-bottom: 3px;
+}
+.classic .skills td {
+  vertical-align: top;
+  padding: 2px 14px 4px 0;
+}
+.classic .skills td:first-child {
+  white-space: nowrap;
+}
+.classic .edu {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 520px) {
+  .classic .intro .photo {
+    width: 96px;
+  }
+  .classic .intro img {
+    width: 88px;
+    height: 88px;
+  }
+  .classic .expand {
+    margin-left: 12px;
+  }
 }
