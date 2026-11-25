@@ -21,7 +21,7 @@ export default function HttpBackendsProject() {
           <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Project Not Found
           </h1>
-          <Link to="/" className="text-blue-600 hover:text-blue-800">
+          <Link to="/" className="text-neutral-600 hover:text-neutral-800">
             ← Back to Home
           </Link>
         </div>
@@ -35,7 +35,7 @@ export default function HttpBackendsProject() {
       <div className="mb-8">
         <Link
           to="/"
-          className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors text-sm font-medium"
+          className="inline-flex items-center text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 transition-colors text-sm font-medium"
         >
           ← Back to Portfolio
         </Link>

@@ -4,109 +4,163 @@
 export const profile = {
   name: "Jadyn Worthington",
   role: "Software Engineer",
-  location: "Delaware, USA",
   avatar: "/jadynwor_avatar.png",
-  now: "building BonaFyde",
+  status: "starting ms cs @ georgia tech, spring 2027",
+  facts: [
+    "Newark, DE",
+    "open to NYC, SF, DC, Atlanta, Houston",
+    "U.S. citizen, clearance eligible",
+  ],
   links: [
-    { label: "Email", href: "mailto:jadynwor@gmail.com" },
-    { label: "GitHub", href: "https://github.com/jadynwor" },
-    { label: "LinkedIn", href: "https://linkedin.com/in/jadynwor" },
+    { label: "email", href: "mailto:jadynmwor@gmail.com" },
+    { label: "github", href: "https://github.com/JadynWor" },
+    { label: "linkedin", href: "https://linkedin.com/in/jadynwor" },
+    { label: "hugging face", href: "https://huggingface.co/jadynwor/aria-sar" },
+    { label: "substack", href: "https://jadynwor.substack.com" },
+    { label: "x", href: "https://x.com/mekhijpg" },
   ],
 };
+
+export interface LinkItem {
+  label: string;
+  href: string;
+}
 
 export interface Update {
   date: string;
   text: string;
-  href?: string;
-  linkText?: string;
+  link?: LinkItem;
 }
 
-// Newest first. The first few show by default; the rest sit behind "More".
+// Newest first. The first few show by default; the rest sit behind "more".
 export const updates: Update[] = [
   {
-    date: "Nov 2025",
-    text: "Built Harvest Hub with Joseph, Dean & Mercedes in a 24-hour hackathon: neighbors claim surplus meals, and an image model verifies the pickup.",
-    href: "/projects/harvest-hub",
-    linkText: "Read the write-up",
+    date: "Spring 2027",
+    text: "Starting my MS in Computer Science at Georgia Tech, focused on robotics and autonomous systems.",
+  },
+  {
+    date: "Aug 2026",
+    text: "Built Bearing Witness with Team Hermit Crab at the Dell x NVIDIA AI Hackathon in NYC: a local agent that flags bearing failures from factory vibration data.",
+  },
+  {
+    date: "2026",
+    text: "TerraWatch won Most Innovative Project at Code for Climate during NY Tech Week, then raised ~$10K pitching to climate-focused backers. 64K+ organic views at launch.",
+    link: { label: "terrawatch.app", href: "https://terrawatch.app" },
+  },
+  {
+    date: "2026",
+    text: "Open-sourced ARIA, a real-time drone search and rescue system, with model weights on Hugging Face. Submitted to the Gemma 4 Good Hackathon.",
+    link: { label: "github", href: "https://github.com/JadynWor/ARIA" },
+  },
+  {
+    date: "Apr 2026",
+    text: "Wrapped my Edge ML & Systems fellowship at Lola Vision Systems.",
+  },
+  {
+    date: "Mar 2026",
+    text: "Wrapped a year as founding engineer at BonaFyde after launching to 5 schools.",
   },
   {
     date: "Nov 2025",
-    text: "Shipped Midas Core, a Spring Boot service that streams Kafka transactions into real-time balances.",
-    href: "/projects/midas-core",
-    linkText: "Architecture",
+    text: "Built Harvest Hub at an overnight hackathon and shipped Midas Core, a Kafka-fed balances API.",
+    link: { label: "harvest hub", href: "/projects/harvest-hub" },
+  },
+  {
+    date: "Oct 2025",
+    text: "Joined Bloom Energy as a manufacturing engineer, automating fuel cell test checks.",
   },
   {
     date: "Aug 2025",
-    text: "Wrapped up 14 months as a software engineer at New Light Technologies, building geospatial data tools on AWS.",
-  },
-  {
-    date: "2025",
-    text: "Started building BonaFyde, a platform that connects prospective students with verified college students.",
-  },
-  {
-    date: "Spring 2025",
-    text: "Spoke on a Tech Council of Delaware panel about how to get started in tech.",
+    text: "Wrapped up at New Light Technologies after shipping data platforms for USAF, UNICEF, Wellcome Trust and Peru's Ministry of Health.",
   },
   {
     date: "2024",
     text: "York College / CUNY profiled how a NASA STEM program I joined at 10 kept me on track.",
-    href: "/achievements/articles/nasa-stem-program",
-    linkText: "Article",
+    link: { label: "article", href: "/achievements/articles/nasa-stem-program" },
   },
   {
     date: "May 2024",
-    text: "Named Outstanding RSO Leader at the University of Delaware YoUDee Leadership Awards.",
-    href: "/achievements/awards/outstanding-rso-leader",
-    linkText: "Details",
-  },
-  {
-    date: "May 2024",
-    text: "Graduated from the University of Delaware with a B.S. in Computer Science.",
+    text: "Graduated from the University of Delaware and was named Outstanding RSO Leader.",
+    link: { label: "award", href: "/achievements/awards/outstanding-rso-leader" },
   },
 ];
 
-export interface FeaturedProject {
-  title: string;
+export interface Project {
+  name: string;
+  subtitle?: string;
+  date: string;
   blurb: string;
+  metrics?: string[];
   stack: string[];
-  href: string;
-  image?: string;
+  links?: LinkItem[];
 }
 
-export const featuredProjects: FeaturedProject[] = [
+export const projects: Project[] = [
   {
-    title: "Harvest Hub",
-    blurb: "Hackathon app for verified community food sharing.",
+    name: "ARIA",
+    subtitle: "Aerial Rescue Intelligence and Analysis",
+    date: "2026",
+    blurb:
+      "Open-source drone search and rescue. Finds people in aerial footage, classifies distress, tracks them across frames, and has a fine-tuned Gemma model write the rescue briefing. Runs fully offline in Docker.",
+    metrics: ["0.861 mAP50 detection", "92% distress accuracy"],
+    stack: ["YOLOv9c", "ByteTrack", "EfficientNet", "Gemma 4B", "FastAPI", "React", "ONNX FP16"],
+    links: [
+      { label: "github", href: "https://github.com/JadynWor/ARIA" },
+      { label: "weights", href: "https://huggingface.co/jadynwor/aria-sar" },
+    ],
+  },
+  {
+    name: "TerraWatch",
+    subtitle: "Founder & technical lead",
+    date: "2026",
+    blurb:
+      "Prompt compression for leaner, lower-energy AI usage, shipped as a Chrome extension, web platform and CLI. Raised ~$10K from climate-focused backers. I own the system design and product architecture.",
+    metrics: ["Most Innovative, NY Tech Week", "~$10K raised", "64K+ launch views"],
+    stack: ["TypeScript", "WXT", "Next.js 15", "Supabase pgvector", "Stripe", "Claude Haiku", "RAG"],
+    links: [{ label: "terrawatch.app", href: "https://terrawatch.app" }],
+  },
+  {
+    name: "BonaFyde",
+    subtitle: "Founding engineer",
+    date: "2025 – 2026",
+    blurb:
+      "AI advising platform for first-gen college students. As the sole engineer I built the whole stack, from the FastAPI backend to BERT and BART models and LLM guidance.",
+    metrics: ["Launched to 5 schools"],
+    stack: ["Python", "FastAPI", "React", "PostgreSQL", "AWS", "BERT", "BART"],
+  },
+  {
+    name: "Bearing Witness",
+    subtitle: "Dell x NVIDIA AI Hackathon, NYC",
+    date: "Aug 2026",
+    blurb:
+      "Local AI agent that catches bearing failures from factory vibration monitoring. Built with Team Hermit Crab: Stephen Sookra, Vinh Le and Bharadhwaj K.",
+    stack: ["Local AI", "Dell Pro Max GB10"],
+  },
+  {
+    name: "Harvest Hub",
+    subtitle: "Overnight hackathon",
+    date: "Nov 2025",
+    blurb:
+      "Community food sharing app. I built the backend and the AI check that verifies pickups from before and after photos.",
     stack: ["Next.js", "Supabase", "OpenAI"],
-    href: "/projects/harvest-hub",
-    image: "/project/harvesthub.png.png",
-  },
-  {
-    title: "Midas Core",
-    blurb: "Kafka-fed balances API in one Spring Boot deployable.",
-    stack: ["Java", "Spring Boot", "Kafka"],
-    href: "/projects/midas-core",
-    image: "/project/midas_core_arch.png",
-  },
-  {
-    title: "Anime Directory",
-    blurb: "Video platform on GCP with an FFmpeg transcode pipeline.",
-    stack: ["Next.js", "Cloud Run", "Pub/Sub"],
-    href: "/projects/anime-directory",
-    image: "/project/anime-directory-sys.avif",
+    links: [{ label: "write-up", href: "/projects/harvest-hub" }],
   },
 ];
 
-export const moreProjects = [
+export const moreProjects: { name: string; blurb: string; href?: string }[] = [
   {
-    title: "HTTP Backends",
-    blurb: "The same REST API in Spring Boot and Express, load-tested with k6.",
-    href: "/projects/http-backend",
+    name: "PAGAF",
+    blurb: "precision agriculture modeling from GIS and satellite imagery; I rebuilt the frontend in React (The Opportunity Project)",
   },
   {
-    title: "Drop That",
-    blurb: "AI-assisted toolkit for streetwear founders (private beta).",
-    href: "/projects/dropthat",
+    name: "Midas Core",
+    blurb: "Kafka-fed balances API in Java and Spring Boot",
+    href: "/projects/midas-core",
+  },
+  {
+    name: "Anime Directory",
+    blurb: "video platform on GCP with a Cloud Run FFmpeg pipeline",
+    href: "/projects/anime-directory",
   },
 ];
 
@@ -120,43 +174,74 @@ export interface Role {
 
 export const experience: Role[] = [
   {
+    org: "Bloom Energy",
+    title: "Manufacturing Engineer, Test Systems & Automation",
+    dates: "Oct 2025 – now",
+    summary:
+      "Python tools that pull sensor data from the OSIsoft PI historian and run pass/fail checks on fuel cell units, replacing a fully manual ship review. Troubleshoot electrical, mechanical and pneumatic systems on the line.",
+  },
+  {
+    org: "Lola Vision Systems",
+    title: "Edge ML & Systems Fellow",
+    dates: "Dec 2025 – Apr 2026",
+    summary:
+      "Real-time object detection pipelines on embedded Linux in Python and C++, plus automated benchmarking of latency, accuracy and throughput across hardware configs.",
+  },
+  {
     org: "New Light Technologies",
-    title: "Software Engineer",
-    dates: "2024 – 2025",
+    title: "Software Developer",
+    dates: "Jun 2024 – Aug 2025",
     summary:
-      "Data APIs on AWS (SST, RDS, S3) and React/MapLibre views for large geospatial datasets. CI/CD with GitHub Actions and Fargate.",
+      "Python and TypeScript services behind REST APIs for federal data platforms serving USAF, UNICEF, Wellcome Trust and Peru's Ministry of Health. CI/CD on GitHub Actions, Docker and Fargate; reporting automation that cut manual effort by 70%.",
   },
   {
-    org: "BonaFyde",
-    title: "Founder",
-    dates: "2025",
-    summary:
-      "Profiles, college browsing and mentor booking on React, Supabase and serverless functions.",
-  },
-  {
-    org: "KaiCoders",
-    title: "Software Engineer Intern",
-    dates: "2023 – 2024",
-    summary: "Taught K–12 students ML and AI ethics; co-designed AI safety workshops.",
-  },
-  {
-    org: "Opila Lab, UD",
-    title: "Software Engineer Intern",
-    dates: "2023",
-    summary: "Python and SQL pipelines for instrument data behind atomic layer etching research.",
+    org: "Opila Lab, University of Delaware",
+    title: "Undergraduate Researcher",
+    dates: "May 2023 – Jan 2024",
+    summary: "Python pipelines and visualization tools for nanofabrication and microscopy data.",
     href: "/achievements/research/atomic-layer-etching",
   },
   {
     org: "NASA Aerospace Scholars",
-    title: "Intern",
-    dates: "2021",
-    summary: "Lunar habitat design challenge; designed the Odysseus lunar rover concept.",
+    title: "Scholar",
+    dates: "Jan – Aug 2021",
+    summary: "Selected nationally; mission design and rover prototyping, including the Odysseus lunar rover concept.",
     href: "/achievements/research/lunar-rover-design",
+  },
+];
+
+export const education: Role[] = [
+  {
+    org: "Georgia Institute of Technology",
+    title: "M.S. Computer Science",
+    dates: "2027 – 2029",
+    summary: "Incoming. Robotics and autonomous systems.",
   },
   {
     org: "University of Delaware",
-    title: "B.S. Computer Science",
+    title: "B.S. Computer Science, AI & Robotics",
     dates: "2024",
-    summary: "Founded Men of Distinction; Outstanding RSO Leader.",
+    summary:
+      "Founded Men of Distinction (Outstanding RSO Leader). Alpha Phi Alpha, Xi Omicron chapter. Black Student Union, Student Government.",
+  },
+];
+
+export const skills: { label: string; items: string }[] = [
+  { label: "languages", items: "Python, TypeScript, JavaScript, C++, SQL, Java, Bash, PHP" },
+  {
+    label: "ml / ai",
+    items: "YOLO, EfficientNet, ByteTrack, Gemma, BERT, BART, RAG, embeddings, fine-tuning (Unsloth, Ollama), ONNX, edge inference, Hugging Face, LangChain, LangGraph",
+  },
+  {
+    label: "web & data",
+    items: "React, Next.js, FastAPI, Node.js, Spring Boot, WXT, MapLibre, PostgreSQL, Supabase (pgvector), MariaDB",
+  },
+  {
+    label: "cloud & ops",
+    items: "AWS (S3, EC2, Fargate, RDS, CloudWatch, IAM, SST), GCP (Cloud Run, Firestore, Pub/Sub), Docker, GitHub Actions, Nginx",
+  },
+  {
+    label: "manufacturing",
+    items: "OSIsoft PI, Tulip MES, Oracle ERP, Agile PLM, embedded Linux",
   },
 ];

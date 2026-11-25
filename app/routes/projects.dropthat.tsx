@@ -14,7 +14,7 @@ export default function DropThatProject() {
       <div className="mb-8">
         <Link
           to="/"
-          className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors text-sm font-medium"
+          className="inline-flex items-center text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 transition-colors text-sm font-medium"
         >
           ← Back to Portfolio
         </Link>

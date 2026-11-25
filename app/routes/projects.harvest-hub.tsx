@@ -40,7 +40,7 @@ export default function HarvestHubProject() {
       <div className="mb-8">
         <Link
           to="/"
-          className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors text-sm font-medium"
+          className="inline-flex items-center text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-300 transition-colors text-sm font-medium"
         >
           ← Back to Portfolio
         </Link>
@@ -121,7 +121,7 @@ export default function HarvestHubProject() {
                   <img
                     src="/project/hh-overview1 (1).png"
                     alt="Harvest Hub listing page screenshot"
-                    className="w-full rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700 group-hover:border-blue-400 dark:group-hover:border-blue-600 transition-colors"
+                    className="w-full rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700 group-hover:border-neutral-400 dark:group-hover:border-neutral-600 transition-colors"
                   />
                 </button>
                 <figcaption className="mt-3 text-sm font-medium text-gray-600 dark:text-gray-400 text-center">
@@ -136,7 +136,7 @@ export default function HarvestHubProject() {
                   <img
                     src="/project/hh-overview1 (2).png"
                     alt="Harvest Hub claim flow screenshot"
-                    className="w-full rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700 group-hover:border-blue-400 dark:group-hover:border-blue-600 transition-colors"
+                    className="w-full rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700 group-hover:border-neutral-400 dark:group-hover:border-neutral-600 transition-colors"
                   />
                 </button>
                 <figcaption className="mt-3 text-sm font-medium text-gray-600 dark:text-gray-400 text-center">
@@ -151,7 +151,7 @@ export default function HarvestHubProject() {
                   <img
                     src="/project/hh-overview1 (3).png"
                     alt="Harvest Hub verification state screenshot"
-                    className="w-full rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700 group-hover:border-blue-400 dark:group-hover:border-blue-600 transition-colors"
+                    className="w-full rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700 group-hover:border-neutral-400 dark:group-hover:border-neutral-600 transition-colors"
                   />
                 </button>
                 <figcaption className="mt-3 text-sm font-medium text-gray-600 dark:text-gray-400 text-center">
@@ -306,7 +306,7 @@ export default function HarvestHubProject() {
             API Design and Data Flow
           </h2>
           <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-800/50 dark:to-gray-900/30 rounded-xl p-8 space-y-8 border border-gray-200 dark:border-gray-700 shadow-sm">
-            <div className="border-l-4 border-blue-500 pl-6">
+            <div className="border-l-4 border-neutral-500 pl-6">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
                 1. Create listing – POST /api/listings
               </h3>
@@ -351,7 +351,7 @@ export default function HarvestHubProject() {
               The Next.js app runs on Vercel and talks to Supabase and OpenAI only through server side API routes. Writes for listings, claims, and verifications all go through those routes, which keeps the database and storage in sync. Photos are only accessible via signed URLs, and the OpenAI API key never leaves the server.
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-semibold">
-              In short: <span className="text-blue-600 dark:text-blue-400">Client → API routes → Supabase + OpenAI</span>.
+              In short: <span className="text-neutral-600 dark:text-neutral-400">Client → API routes → Supabase + OpenAI</span>.
             </p>
           </div>
         </section>
